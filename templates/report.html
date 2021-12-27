@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Job Search
+        </title>
+        <style>
+            section {
+                display: grid;
+                gap: 20px;
+                grid-template-columns: repeat(4, 1fr);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Search Results</h1>
+        <!-- python에서 넘겨받은 인수는 꺾인 괄호 2세트 안에 인수명을 지정해줌으로써 사용 가능 -->
+        <h3>Found {{resultsNumber}} results for: {{searchingBy}}</h3>
+        <a href="/export?job-name={{searchingBy}}">Export to CSV</a>
+        <section>
+            <h4>Title</h4>
+            <h4>Company</h4>
+            <h4>Location</h4>
+            <h4>Link</h4>
+            {% for job in jobs %}
+            <span>{{job.title}}</span>
+            <span>{{job.company}}</span>
+            <span>{{job.location}}</span>
+            <a href="{{job.link}}" target="_blank">Apply</a>
+            {% endfor %}
+
+        </section>
+    </body>
+
+</html>
