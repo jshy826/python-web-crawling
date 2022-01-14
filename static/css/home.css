@@ -1,0 +1,13 @@
+body {
+    display: block;
+    background-color: #bdcdf0;
+    z-index: 5;
+}
+
+div.title {
+    text-align: center;
+}
+
+div.searching {
+    text-align: center;
+}

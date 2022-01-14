@@ -6,7 +6,7 @@ def save_to_file(jobs, job_name):
     file = open(job_name + ".csv", mode="w", encoding="utf-8-sig", newline="")
     writer = csv.writer(file)
     # 타이틀들을 배열로 넘겨서 작성해줌
-    writer.writerow(['title', 'company', 'location', 'link'])
+    writer.writerow(['Title', 'Company', 'Location', 'Link'])
     for job in jobs:
         # key값 말고 value값만 작성
         writer.writerow(list(job.values()))
